@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AllFiles" representedClassName="YaAPI.AllFiles" parentEntity="Files" syncable="YES">
+        <attribute name="public_key" optional="YES" attributeType="String"/>
+        <attribute name="stale" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <relationship name="embedded" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="List" inverseName="host" inverseEntity="List"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="List" inverseName="items" inverseEntity="List"/>
+    </entity>
+    <entity name="AllFlsFCache" representedClassName="YaAPI.AllFlsFCache" syncable="YES" codeGenerationType="class">
+        <attribute name="cacheFileName" attributeType="String"/>
+        <attribute name="md5" optional="YES" attributeType="String"/>
+        <attribute name="path" attributeType="String"/>
+        <attribute name="resource_id" optional="YES" attributeType="String"/>
+        <attribute name="revision" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="cacheFileName"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Files" representedClassName="YaAPI.Files" syncable="YES">
+        <attribute name="created" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="file" optional="YES" attributeType="String"/>
+        <attribute name="md5" optional="YES" attributeType="String"/>
+        <attribute name="media_type" optional="YES" attributeType="String"/>
+        <attribute name="mime_type" optional="YES" attributeType="String"/>
+        <attribute name="modified" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="path" attributeType="String"/>
+        <attribute name="preview" optional="YES" attributeType="String"/>
+        <attribute name="public_url" optional="YES" attributeType="String"/>
+        <attribute name="resource_id" optional="YES" attributeType="String"/>
+        <attribute name="revision" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="size" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="LastFiles" representedClassName="YaAPI.LastFiles" parentEntity="Files" syncable="YES">
+        <attribute name="sortOrder" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="List" representedClassName="YaAPI.List" syncable="YES">
+        <attribute name="limit" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="offset" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="path" attributeType="String"/>
+        <attribute name="sort" optional="YES" attributeType="String"/>
+        <attribute name="total" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="host" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AllFiles" inverseName="embedded" inverseEntity="AllFiles"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AllFiles" inverseName="item" inverseEntity="AllFiles"/>
+    </entity>
+    <entity name="PublicFiles" representedClassName="YaAPI.PublicFiles" parentEntity="Files" syncable="YES">
+        <attribute name="public_key" attributeType="String"/>
+        <attribute name="sortOrder" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="AllFiles" positionX="162" positionY="297" width="128" height="89"/>
+        <element name="AllFlsFCache" positionX="162" positionY="315" width="128" height="104"/>
+        <element name="Files" positionX="160" positionY="192" width="128" height="239"/>
+        <element name="LastFiles" positionX="180" positionY="324" width="128" height="44"/>
+        <element name="List" positionX="171" positionY="306" width="128" height="149"/>
+        <element name="PublicFiles" positionX="162" positionY="315" width="128" height="59"/>
+    </elements>
+</model>

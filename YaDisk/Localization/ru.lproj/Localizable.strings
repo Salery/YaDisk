@@ -1,0 +1,59 @@
+// onboard
+"Now all your documents\nare in one place" = "Теперь все ваши\nдокументы в одном месте";
+"Can access\nfiles offline" = "Доступ к файлам без\nинтернета";
+"Share your files" = "Делитесь вашими файлами\nс другими";
+// start
+"Login" = "Войти";
+// fileSizes
+"B" = "Б";
+"KB" = "КБ";
+"MB" = "МБ";
+"GB" = "ГБ";
+// Public files
+"Public files" = "Опубликованные файлы";
+//rpofile
+"Profile" = "Профиль";
+" used" = " использовано";
+" trash" = " корзина";
+" free" = " свободно";
+"Are you sure you want to log off? All local user data will be deleted." = "";
+"Cancel" = "Отмена";
+"Log off" = "Выйти";
+// last files
+"Empty" = "Пусто";
+"Last files" = "Последние файлы";
+"Unpublish" = "";
+// detailed
+"Unable to view the file" = "Просмотр недоступен";
+"Rename" = "Переименовать";
+"Cancel download" = "Отмена скачивания";
+"Downloading:" = "Скачивание:";
+"Share link" = "Поделиться ссылкой";
+"Share file (pre-downloaded)" = "Поделиться файлом (скаченным)";
+"Delete" = "Удалить";
+"Do you really want to delete this file permanently?" = "Вы действительно хотите удалить файл без возможности восстановления?";
+"Delete permanently" = "Удалить навсегда";
+"Download" = "Скачать";
+// All files
+"All files" = "Все файлы";
+// extensions
+"Yes" = "Да";
+"Next" = "Следующий";
+//Errors
+"Invalid responce from the claud server. Try again!" = "Неверный ответ от сервера Диска. Попробуйте обновить список файлов!";
+"Authorisation failed! New authorisation required. App data cleared." = "Ошибка авторизации! Необходимо авторизоваться заново. Данные приложения очищены.";
+"API not available. Your files are taking up more space than you have. Delete unnecessary files or increase the size of the Disk." = "API недоступно. Ваши файлы занимают больше места, чем у вас есть. Удалите лишнее или увеличьте объём Диска.";
+"The requested resource could not be found." = "Не удалось найти запрошенный ресурс.";
+"The resource cannot be represented in the requested format." = "Ресурс не может быть представлен в запрошенном формате.";
+"File upload is not available. The file is too large." = "Загрузка файла недоступна. Файл слишком большой.";
+"Engineering works. Now you can only view and download files." = "Технические работы. Сейчас можно только просматривать и скачивать файлы.";
+"Too many requests." = "Слишком много запросов";
+"Service is temporarily unavailable" = "Сервис временно недоступен.";
+"No connection to the cloud server." = "Нет соединения с сервером Диска.";
+"Not enough free space." = "Недостаточно свободного места.";
+"Error" = "Ошибка";
+"Auth token didn't save" = "Токен не был сохранен";
+"No connection to the auth server" = "Нет соединения с сервером авторизации";
+"Auth token didn't update" = "Токен не обновился";
+"Authorisation failed! New authorisation required. App data cleared." = "Авторизация не удалась. Требуется авторизоваться заново. Данные приложения очищены";
+"Download canceled." = "Скачивание отменено";
