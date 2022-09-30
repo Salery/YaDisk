@@ -16,7 +16,7 @@
 " used" = " использовано";
 " trash" = " корзина";
 " free" = " свободно";
-"Are you sure you want to log off? All local user data will be deleted." = "";
+"Are you sure you want to log off? All local user data will be deleted." = "Вы уверены, что хотите выйти из системы? Все локальные пользовательские данные будут удалены.";
 "Cancel" = "Отмена";
 "Log off" = "Выйти";
 // last files
