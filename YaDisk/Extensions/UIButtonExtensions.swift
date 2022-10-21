@@ -20,7 +20,7 @@ extension UIButton {
             self.init(type: .roundedRect)
             layer.cornerRadius = 10
             setTitleColor(.white, for: .normal)
-            backgroundColor = .blue
+            backgroundColor = .systemBlue
             frame.size = CGSize(width: 320, height: 50)
             if let view = bottomRelativeToView {
                 frame.origin = CGPoint(x: (view.frame.width - frame.width)/2, y: view.frame.height - 142)

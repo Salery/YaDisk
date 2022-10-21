@@ -11,7 +11,7 @@ import Shared
 class LastFilesTableVC: UITableViewController, LastFilesViewProtocol {
     let viewModel: LastFilesTableVM
     let navTitle: String
-    let navBarAppearanceConnectedColor:    UIColor = .white
+    let navBarAppearanceConnectedColor:    UIColor = Const.Colors.navBarsBgColor
     let navBarAppearanceDisconnectedColor: UIColor = .red
     
     let cellID = "myCell"
@@ -68,12 +68,11 @@ class LastFilesTableVC: UITableViewController, LastFilesViewProtocol {
     }
     
     private func setupTableView () {
-        navigationItem.title = navTitle
         navigationItem.backButtonTitle = ""
         tableView.register(FilesListCellV.self, forCellReuseIdentifier: cellID)
         tableView.refreshControl = refreshCntrl
         tableView.rowHeight = 50
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = Const.Colors.viewsMainBgColor
     }
     
     // opens the detailed view and subscribes to data updates

@@ -16,8 +16,6 @@ public final class CoreDataManager {
     private lazy var persistentContainer: NSPersistentContainer = {
         let modelURL = Bundle(for: CoreDataManager.self).url(forResource: "DataModel", withExtension: "momd")
         let objectModel = NSManagedObjectModel(contentsOf: modelURL!)
-// MARK: Delete:
-print("DataModel: ", modelURL)
         let container = NSPersistentContainer(name: "DataModel", managedObjectModel: objectModel!)
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -103,8 +101,6 @@ print("DataModel: ", modelURL)
             allFile.public_url  = fileResource.public_url
             allFile.public_key  = fileResource.public_key
             // the item field is already actual or nil if it is "/"
-// MARK: Delete:
-//            if let oldEmbedded = allFile.embedded { context.delete(oldEmbedded) }
             let embedded = allFile.embedded ?? List(entity: listEntity, insertInto: context)
             embedded.limit  = fileResource._embedded?.limit  ?? Int64(YaConst.allFilesPageLimit)
             embedded.offset = fileResource._embedded?.offset ?? 0
@@ -121,9 +117,6 @@ print("DataModel: ", modelURL)
                     context.delete(item)
                 }
             })
-// MARK: Delete:
-//            do { try context.save() }
-//            catch { print("Error saving allfile with a new embedded: ", error.localizedDescription) }
         }
         // Add items
         // newFile - an exists dir or a new file
@@ -158,8 +151,6 @@ print("DataModel: ", modelURL)
         if let count = fileResource._embedded?.items.count,
            let total = allFile.embedded?.total,
             count + offset >= total {
-// MARK: Delete: print
-//print("Delete stale files after loading full folder from api")
             (allFile.embedded?.items as? Set<AllFiles>)?.forEach({ item in
                 if item.stale == true {
                     allFile.embedded?.removeFromItems(item)

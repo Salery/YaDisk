@@ -28,8 +28,8 @@ final class OnboardingVC: StartScreensVCTemplate {
     }()
     private lazy var pgControl: UIPageControl = {
         let pgControl = UIPageControl()
-        pgControl.currentPageIndicatorTintColor = .blue
-        pgControl.pageIndicatorTintColor = .gray
+        pgControl.currentPageIndicatorTintColor = .systemBlue
+        pgControl.pageIndicatorTintColor = .systemGray
         pgControl.currentPage = 0
         pgControl.numberOfPages = 3
         pgControl.frame.size   = pgControl.size(forNumberOfPages: 3)

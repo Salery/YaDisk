@@ -107,6 +107,7 @@ final class FilesListCellV: UITableViewCell {
     }
     
     private func setupViews () {
+        contentView.backgroundColor = Const.Colors.viewsMainBgColor
         contentView.addSubview(icon)
         contentView.addSubview(nameLabel)
         contentView.addSubview(infLabel)

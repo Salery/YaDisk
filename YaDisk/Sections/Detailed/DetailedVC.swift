@@ -288,7 +288,8 @@ class DetailedVC: UIViewController, DetailedViewProtocol {
         }
     }
     // MARK: Views & constraints
-    private func setupViews () {view.backgroundColor = Const.Colors.detVCScrnWBarsColor
+    private func setupViews () {
+        view.backgroundColor = Const.Colors.detVCScrnWBarsColor
         // For the transparent bottom toolbar ios15, bug with image <15:
         view.addSubview(emptyView)
 //        view.addSubview(fileInfoLabel)
@@ -518,6 +519,5 @@ class DetailedVC: UIViewController, DetailedViewProtocol {
         viewModel.progress.value = nil
         // return real device orientation after manual configuration
         UIDevice.current.setValue(lastOrientation.rawValue, forKey: "orientation")
-        print("Deinit: ", self)
     }
 }

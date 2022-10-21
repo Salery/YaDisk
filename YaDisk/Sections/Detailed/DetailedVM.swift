@@ -253,8 +253,7 @@ final class DetailedVM: VMClass, DetailedVMProtocol {
     // Checks for cache and if not, downloads
     private func downloadFile (url: String, id: String, size: Int64, manualStart: Bool = false) {
         let fileUrl = getFilePath(id: id)
-// MARK: Delete: false/true &&
-        if true && FileManager.default.fileExists(atPath: fileUrl.path) {
+        if FileManager.default.fileExists(atPath: fileUrl.path) {
             file.value = fileUrl
             if model.input.startsFrom == "LastFiles" {
                 // The LastFiles module takes care of the cache file
@@ -308,9 +307,5 @@ final class DetailedVM: VMClass, DetailedVMProtocol {
             timer?.invalidate()
             timer = nil
         }
-    }
-    
-    deinit {
-        print("Deinit: ", self)
     }
 }

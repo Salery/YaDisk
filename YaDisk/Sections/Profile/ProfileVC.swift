@@ -13,7 +13,7 @@ import SnapKit
 class ProfileVC: UIViewController, ProfileViewProtocol {
     let viewModel = ProfileVM()
     let navTitle: String = NSLocalizedString("Profile", comment: "Title.userInfo")
-    let navBarAppearanceConnectedColor:    UIColor = .white
+    let navBarAppearanceConnectedColor:    UIColor = Const.Colors.navBarsBgColor
     let navBarAppearanceDisconnectedColor: UIColor = .red
     
     private let centralActIndicator = UIActivityIndicatorView()
@@ -26,7 +26,7 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
         label.font = Const.Fonts.capacityLblFnt
         label.textColor = Const.Colors.capacityLblColor
         label.textAlignment = .center
-        label.backgroundColor = .white
+        label.backgroundColor = Const.Colors.viewsMainBgColor
         label.layer.masksToBounds = true
         label.text = "Total"
         return label
@@ -233,7 +233,7 @@ class ProfileVC: UIViewController, ProfileViewProtocol {
     
     // other views
     private func setupViews () {
-        view.backgroundColor = .white
+        view.backgroundColor = Const.Colors.viewsMainBgColor
         navigationItem.rightBarButtonItem = rBarButton
         view.addSubview(button)
         centralActIndicatorAnimation(value: true)

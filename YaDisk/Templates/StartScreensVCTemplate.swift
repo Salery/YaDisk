@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Shared
 
 class StartScreensVCTemplate: UIViewController {
     var nextVC: UIViewController?
@@ -27,7 +28,7 @@ class StartScreensVCTemplate: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = Const.Colors.viewsMainBgColor
     }
     
     func binder () {}

@@ -34,7 +34,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.makeKeyAndVisible()
         }
         window?.rootViewController = Auth.firstAuth ? OnboardingVC() : StartVC()
-        window?.backgroundColor = .white
+        window?.backgroundColor = Const.Colors.windowBgColor
         if let url = connectionOptions.urlContexts.first?.url {
             handleURL(url: url)
         }

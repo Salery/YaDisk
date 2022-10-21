@@ -21,29 +21,32 @@ public enum Const {
         public static let uInfoLblFnt    = UIFont.systemFont(ofSize: 17)
     }
     public enum Colors {
-        public static let filesNameFontColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-        public static let filesInfColor      = UIColor(red: 0.62, green: 0.62, blue: 0.62, alpha: 1)
+        public static let viewsMainBgColor   = UIColor.tertiarySystemBackground
+        public static let navBarsBgColor     = UIColor.secondarySystemBackground
+        public static let windowBgColor      = UIColor.systemBackground
+        public static let filesNameFontColor = UIColor.label
+        public static let filesInfColor      = UIColor.secondaryLabel
         public static let filesInfshdwColor  = UIColor.white
-        public static let dateCreatedColor   = UIColor(red: 0.741, green: 0.741, blue: 0.741, alpha: 1)
+        public static let dateCreatedColor   = UIColor.tertiaryLabel
         public static let cellIconBgColor    = UIColor(red: 0.965, green: 0.965, blue: 0.965, alpha: 1)
-        public static let rowSeparatorColor  = UIColor(red: 0.908, green: 0.908, blue: 0.908, alpha: 1).cgColor
-        public static let downloadFontColor:   UIColor = .gray
-        public static let dwnldCountFontColor: UIColor = .green
+        public static let rowSeparatorColor  = UIColor.separator.cgColor
+        public static let downloadFontColor:   UIColor = .systemGray
+        public static let dwnldCountFontColor: UIColor = .systemGreen
         public static let detVCFullScrnColor:  UIColor = .black
-        public static let detVCScrnWBarsColor: UIColor = .white
-        public static let withoutViewFntColor: UIColor = .darkGray
-        public static let dwnlFlBShdwColor   = UIColor.gray.cgColor
+        public static let detVCScrnWBarsColor: UIColor = viewsMainBgColor
+        public static let withoutViewFntColor: UIColor = .secondaryLabel
+        public static let dwnlFlBShdwColor   = UIColor.systemGray.cgColor
         public static let emptDataLblColor   = filesInfColor
-        public static let capacityLblColor:    UIColor = .darkGray
-        public static let uInfoFontColor:      UIColor = .darkGray
-        public static let uInfoFreeColor:      UIColor = .green
-        public static let uInfoUsedColor:      UIColor = .red
+        public static let capacityLblColor:    UIColor = .secondaryLabel
+        public static let uInfoFontColor:      UIColor = .secondaryLabel
+        public static let uInfoFreeColor:      UIColor = .systemGreen
+        public static let uInfoUsedColor:      UIColor = .systemRed
         public static let uInfoTrashColor:     UIColor = .black
         public static let profileButtonColor:  UIColor = .white
         public static let profileBtnFntColor:  UIColor = .darkGray
         public static let profileBShdwColor  = dwnlFlBShdwColor
         public static let unpublBShdwColor   = dwnlFlBShdwColor
-        public static let unpublBHghLtColor:   UIColor = .orange
+        public static let unpublBHghLtColor:   UIColor = .systemOrange
     }
     public enum Images {
         public static let onboarding1  = UIImage(named: "Onboarding1")

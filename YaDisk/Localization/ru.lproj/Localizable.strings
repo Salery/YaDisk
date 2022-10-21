@@ -22,7 +22,7 @@
 // last files
 "Empty" = "Пусто";
 "Last files" = "Последние файлы";
-"Unpublish" = "";
+"Unpublish" = "Снять с публикации";
 // detailed
 "Unable to view the file" = "Просмотр недоступен";
 "Rename" = "Переименовать";
